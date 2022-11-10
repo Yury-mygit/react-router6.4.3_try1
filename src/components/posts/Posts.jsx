@@ -7,7 +7,7 @@ const Posts = () => {
 
     let  userId = useLoaderData();
 
-    console.log(userId)
+    console.log('Posts',userId)
 
     return (
         <div className={cl.wrapper}>

@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         element: <Posts />,
         errorElement: <div>Error in Posts</div>,
         loader: async ({ params }) => {
-          console.log(params)
+          // console.log(params)
           const result = await fetch('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=5')
           return result.json()
         },

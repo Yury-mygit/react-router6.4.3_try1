@@ -12,7 +12,7 @@ const Global404 = () => {
 
     const [timer, setTimer] = useState(5)
 
-    
+    console.log('404 global')
 
     useEffect(()=>{
         setTimeout(()=>{
