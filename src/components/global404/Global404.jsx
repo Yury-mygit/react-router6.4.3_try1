@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import cl from './Global404.module.css'
+
 import { useEffect } from 'react';
 
 import { useNavigate } from "react-router-dom";

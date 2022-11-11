@@ -20,49 +20,43 @@ import { redirect } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "",
+    path: "/",
     element: <Root/>,
     errorElement: <Global404/>,
     loader: async() => {
       return {action:true}
     },
-
-    children: [
-      {
-        path: "home",
-        element: <Home/>,
-        errorElement: <div>Error 404 global</div>,
-        
-      },
-      {
-        path: "posts",
-        element: <Posts />,
-        errorElement: <div>Error in Posts</div>,
-        loader: async ({ params }) => {
-          // console.log(params)
-          const result = await fetch('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=5')
-          return result.json()
-        },
-      },
-      {
-        path: "item/:item",
-        element: <Item />,
-        errorElement: <div>Error 404 in Item</div>,
-        loader: async ({ params }) => {
-          
-          return params
-        },
-      },
-      {
-        path: "about/",
-        element: <About/>,
-        errorElement: <div>Error 404</div>
-      },
-    ],
+  },  
+  {
+    path: "/home",
+    element: <Home/>,
+    errorElement: <div>Error 404 global</div>,
     
   },
-  
-  
+  {
+    path: "/posts",
+    element: <Posts />,
+    errorElement: <div>Error in Posts</div>,
+    loader: async ({ params }) => {
+      // console.log(params)
+      const result = await fetch('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=5')
+      return result.json()
+    },
+  },
+  {
+    path: "/item/:item",
+    element: <Item />,
+    errorElement: <div>Error 404 in Item</div>,
+    loader: async ({ params }) => {
+      
+      return params
+    },
+  },
+  {
+    path: "/about/",
+    element: <About/>,
+    errorElement: <div>Error 404</div>
+  },
 ]);
 
 

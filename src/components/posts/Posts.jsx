@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, Outlet } from "react-router-dom";
 import { useLoaderData } from 'react-router-dom';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
 import cl from './Posts.module.css'
 
 const Posts = () => {
@@ -10,6 +12,8 @@ const Posts = () => {
     console.log('Posts',userId)
 
     return (
+        <>
+        <Header/>
         <div className={cl.wrapper}>
             <h1> There is a Posts component </h1>
             <Link to={'/home'} >Return to home</Link>
@@ -28,6 +32,8 @@ const Posts = () => {
             })}
            
         </div>
+        <Footer/>
+        </>
     );
 };
 

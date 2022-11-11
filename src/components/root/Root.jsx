@@ -13,7 +13,7 @@ const Root = () => {
     let locations = useLocation(); 
     let  item = useLoaderData();
 
-    // console.log(item)
+    console.log(item)
     console.log('location is' , locations)
 
     useEffect(()=>{
@@ -23,9 +23,7 @@ const Root = () => {
 
     return (
         <>
-         <Header/>
-         <Outlet/>  
-         <Footer/>
+        
         </>
         
     )
