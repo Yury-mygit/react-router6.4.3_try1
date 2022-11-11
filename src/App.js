@@ -20,7 +20,7 @@ import { redirect } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <Root/>,
     errorElement: <Global404/>,
     loader: async() => {
