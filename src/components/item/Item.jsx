@@ -7,9 +7,9 @@ import Header from '../header/Header';
 
 const Item = () => {
 
-    let  item = useLoaderData();
+    let  id = useLoaderData();
 
-    console.log('Item:item',item)
+    console.log('Item:item',id)
 
     return (
       <>
@@ -19,7 +19,7 @@ const Item = () => {
           <h1> You are in Item.</h1> 
           
           <div>
-             item = {item.item}
+             item = {id.id}
           </div>
            
           
